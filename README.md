@@ -1,3 +1,4 @@
+
 # ![AeroLumen Quad](images/banner.jpg)
 <!-- Recommended dimensions for the banner: 1200x300 pixels -->
 
@@ -95,38 +96,64 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 
 ---
 
+## Earthquake Assistance UAV Drone
+
+This project involves designing a quadcopter UAV aimed at assisting people trapped during earthquakes. It provides visual guidance using an 8x8 NeoPixel LED matrix and is manually controlled via QGroundControl (QGC), utilizing the PX4 Pro flight control software.
+
+![Banner Image](assets/banner.png)
+
+### 📋 Project Overview
+
+- **Flight Controller Software**: [PX4 Pro](https://px4.io/)
+- **Ground Control**: [QGroundControl (QGC)](https://docs.qgroundcontrol.com/en/)
+- **Primary Function**: Assist in navigating earthquake-stricken areas and guide trapped individuals using visual signals on an 8x8 LED matrix display.
+
+### 📏 Key Calculations
+
+#### 1. Thrust Calculation
+- Total thrust (T_total) = weight of the drone + payload capacity
+- Weight of drone = 1200 grams
+- Thrust per motor = 850 grams
+- Total thrust = 4 × 850 = 3400 grams
+
+#### 2. Payload Capacity Calculation
+- Payload capacity (P_load) = total thrust - weight of the drone
+- P_load = 3400 - 1200 = 2200 grams
+
+#### 3. Flight Time Estimation
+- Battery capacity = 2200 mAh
+- Average current draw = 15A
+- Estimated flight time = (2200 × 60) / 15000 ≈ 8.8 minutes
+
+#### 4. Propeller Selection
+- Propeller size = 10x4.5 inches
+- Thrust per propeller = 850 grams
+
+---
+
 ## Future Enhancements
 - Integration of additional sensors (e.g., thermal cameras, air quality sensors) for expanded monitoring capabilities.
 - Development of a mobile application for enhanced control and real-time data visualization.
 
 ---
 
-## How to Use
-1. **Power On**: Ensure the battery is connected securely.
-2. **Calibration**: Perform necessary calibrations using mission planning software.
-3. **Flight**: Use the paired remote controller for manual control or pre-defined autonomous missions.
-4. **Monitoring**: Observe real-time data via the telemetry module and ESP32 for wireless updates.
-
----
-
 ## Contributing
-Contributions are welcome! If you have ideas for improvements or new features, feel free to submit a pull request or open an issue.
+Contributions are welcome! Submit a pull request or open an issue for improvements.
 
 ---
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ---
 
 ## Acknowledgments
 - **School of Computer Science Engineering**, Cyber Physical Systems specialization.
-- Special thanks to our supervisor **Dr. V. Muthumanikandan** for guidance throughout this project.
+- Special thanks to **Dr. V. Muthumanikandan** for guidance throughout this project.
 
 ---
 
 ## Contact
-For further information, please contact:
 - Tanya Tripathi - [Email](mailto:email@example.com)
 - Saumitya Pareek - [Email](mailto:email@example.com)
 - Mohit Subramaniam - [Email](mailto:email@example.com)

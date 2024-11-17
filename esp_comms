@@ -1,0 +1,69 @@
+#include <Adafruit_NeoPixel.h>
+#include <WiFi.h>
+#include <WebServer.h>
+
+#define LED_PIN 27
+#define NUM_LEDS 64
+
+const char* ssid = "ESP32_LED_Display";
+const char* password = "123456789";
+
+Adafruit_NeoPixel leds = Adafruit_NeoPixel(NUM_LEDS, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+const uint8_t charMap[40][8] = {
+  {B00000000, B00111100, B01100110, B01100110, B01111110, B01100110, B01100110, B01100110}, // A
+  {B01111000, B01001000, B01001000, B01110000, B01001000, B01000100, B01000100, B01111100}, // B
+  {B00000000, B00011110, B00100000, B01000000, B01000000, B01000000, B00100000, B00011110}, // C
+  {B00000000, B00111000, B00100100, B00100010, B00100010, B00100100, B00111000, B00000000}, // D
+  {B00000000, B00111100, B00100000, B00111000, B00100000, B00100000, B00111100, B00000000}, // E
+  {B00000000, B00111100, B00100000, B00111000, B00100000, B00100000, B00100000, B00000000}, // F
+  {B00000000, B00111110, B00100000, B00100000, B00101110, B00100010, B00111110, B00000000}, // G
+  {B00000000, B00100100, B00100100, B00111100, B00100100, B00100100, B00100100, B00000000}, // H
+  {B00000000, B00111000, B00010000, B00010000, B00010000, B00010000, B00111000, B00000000}, // I
+  {B00000000, B00011100, B00001000, B00001000, B00001000, B00101000, B00111000, B00000000}, // J
+  {B00000000, B00100100, B00101000, B00110000, B00101000, B00100100, B00100100, B00000000}, // K
+  {B00000000, B00100000, B00100000, B00100000, B00100000, B00100000, B00111100, B00000000}, // L
+  {B00000000, B00000000, B01000100, B10101010, B10010010, B10000010, B10000010, B00000000}, // M
+  {B00000000, B00100010, B00110010, B00101010, B00100110, B00100010, B00000000, B00000000}, // N
+  {B00000000, B00111100, B01000010, B01000010, B01000010, B01000010, B00111100, B00000000}, // O
+  {B00000000, B00111000, B00100100, B00100100, B00111000, B00100000, B00100000, B00000000}, // P
+  {B00000000, B00111100, B01000010, B01000010, B01000010, B01000110, B00111110, B00000001}, // Q
+  {B00000000, B00111000, B00100100, B00100100, B00111000, B00100100, B00100100, B00000000}, // R
+  {B00000000, B00111100, B00100000, B00111100, B00000100, B00000100, B00111100, B00000000}, // S
+  {B00000000, B01111100, B00010000, B00010000, B00010000, B00010000, B00010000, B00000000}, // T
+};
+
+WebServer server(80);
+String inputText = "";
+int scrollIndex = 0;
+bool displayOn = true;
+bool lightBar = false;
+bool lightShow = false;
+bool rainbowOn = false;
+uint32_t lightBarColor = 0xFFFFFF;
+uint8_t brightness = 255;
+
+void setup() {
+  Serial.begin(115200);
+  leds.begin();
+  leds.setBrightness(brightness);
+  WiFi.softAP(ssid, password);
+
+  delay(2000);
+  IPAddress ip = WiFi.softAPIP();
+  Serial.print("AP IP address: ");
+  Serial.println(ip);
+
+  server.on("/", HTTP_GET, []() {
+    String page = "<html><head><style>body { font-family: Arial, sans-serif; text-align: center; background-color: #f0f8ff; }";
+    page += "button { padding: 15px 25px; margin: 10px; font-size: 18px; background-color: #4CAF50; color: white; border: none; }";
+    page += "input[type=text] { width: 80%; padding: 12px; font-size: 18px; }</style></head><body>";
+    page += "<h1>ESP32 LED Display Control</h1><form id='displayForm'><input type='text' name='text' placeholder='Enter text' id='textInput'><br>";
+    page += "<button type='button' onclick='sendText()'>Display Text</button>";
+    page += "</form><script>function sendText() { var text = document.getElementById('textInput').value;";
+    page += "fetch('/displayText?text=' + text); }</script></body></html>";
+    server.send(200, "text/html", page);
+  });
+
+  server.begin();
+}

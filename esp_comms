@@ -67,3 +67,38 @@ void setup() {
 
   server.begin();
 }
+
+
+void loop() {
+  server.handleClient();
+
+  if (displayOn) {
+    scrollText();
+    delay(150);
+  } else if (lightBar) {
+    runLightBar();
+    delay(100);
+  } else if (lightShow) {
+    runLightShow();
+    delay(100);
+  } else if (rainbowOn) {
+    runRainbow();
+    delay(100);
+  }
+}
+
+void scrollText() {
+  // Function to scroll the input text across the LED display
+}
+
+void runLightBar() {
+  // Function to run the light bar pattern
+}
+
+void runLightShow() {
+  // Function to run a light show pattern
+}
+
+void runRainbow() {
+  // Function to display a rainbow pattern
+}

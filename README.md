@@ -131,6 +131,182 @@ This project involves designing a quadcopter UAV aimed at assisting people trapp
 
 ---
 
+
+# ESP32 LED Matrix Display Project 🎨
+
+Create a dynamic LED matrix display with the ESP32 microcontroller, allowing remote control through a web interface! This project enables users to display text, activate lighting patterns, and adjust brightness in real time.
+
+---
+
+## 📜 Table of Contents
+- [Project Overview](#project-overview)
+- [Libraries and Constants](#libraries-and-constants)
+- [WiFi Access Point Setup](#wifi-access-point-setup)
+- [LED Matrix Character Map](#led-matrix-character-map)
+- [Web Server Configuration](#web-server-configuration)
+  - [Web Page Design](#web-page-design)
+  - [Control Actions](#control-actions)
+    - [Text Display](#text-display)
+    - [Turn Off Display](#turn-off-display)
+    - [Light Bar & Color Selection](#light-bar--color-selection)
+    - [Light Show](#light-show)
+
+---
+
+## Project Overview
+
+This project leverages the **ESP32** microcontroller to control a **NeoPixel 8x8 LED matrix display**. Users can connect to the ESP32's WiFi access point and use a web-based interface to manage the display settings. The ESP32 runs as a standalone access point, enabling remote control from any WiFi-enabled device.
+
+---
+
+## 📦 Libraries and Constants
+
+```cpp
+#include <Adafruit_NeoPixel.h>
+#include <WiFi.h>
+#include <WebServer.h>
+
+#define LED_PIN 27
+#define NUM_LEDS 64
+```
+
+- **Adafruit_NeoPixel**: Library for controlling NeoPixel LED displays.
+- **WiFi** and **WebServer**: Libraries for handling ESP32's WiFi capabilities and serving a web interface.
+- **LED_PIN**: The GPIO pin connected to the LED strip.
+- **NUM_LEDS**: Total number of LEDs in the matrix.
+
+---
+
+## 📡 WiFi Access Point Setup
+
+```cpp
+const char* ssid = "ESP32_LED_Display";
+const char* password = "123456789";
+
+WiFi.softAP(ssid, password);
+```
+
+The ESP32 is configured as an access point:
+- **SSID**: "ESP32_LED_Display"
+- **Password**: "123456789"
+
+This allows users to connect directly to the ESP32 network to control the LED display.
+
+---
+
+## 🖼️ LED Matrix Character Map
+
+```cpp
+const uint8_t charMap[40][8] = {
+  // Each 8-byte array represents a character's binary map for the LED matrix.
+};
+```
+
+The **charMap** array stores binary data for each character in the display. Each 8-byte array corresponds to one character, defining its display pattern on the 8x8 LED matrix.
+
+---
+
+## 🌐 Web Server Configuration
+
+### Web Page Design
+
+The ESP32 hosts a simple **HTML page with JavaScript** that includes buttons and controls for:
+- **Displaying text**
+- **Turning off the display**
+- **Selecting colors and patterns**
+- **Adjusting brightness**
+
+```cpp
+server.on("/", HTTP_GET, []() {
+  String page = "<html>..."; // HTML and JavaScript for the control page
+  server.send(200, "text/html", page);
+});
+```
+
+This **root endpoint ("/")** serves the control page where users can interact with the LED matrix.
+
+---
+
+### 🎛️ Control Actions
+
+#### 1. Text Display
+Display custom text on the LED matrix.
+
+```cpp
+server.on("/displayText", HTTP_GET, []() {
+  inputText = server.arg("text").toUpperCase();
+});
+```
+
+- **Description**: Converts input text to uppercase and sends it to the display.
+
+#### 2. Turn Off Display
+Turn off all LEDs on the matrix.
+
+```cpp
+server.on("/turnOff", HTTP_GET, []() {
+  displayOn = false;
+});
+```
+
+- **Description**: Deactivates the LED matrix display.
+
+#### 3. Light Bar & Color Selection
+Activate a light bar with a custom color.
+
+```cpp
+server.on("/lightBar", HTTP_GET, []() {
+  lightBarColor = strtol(server.arg("color").c_str(), NULL, 16);
+  lightBar = true;
+});
+```
+
+- **Description**: Sets a chosen color on the LED matrix in a light bar pattern.
+
+#### 4. Light Show
+Start an animated light show.
+
+```cpp
+server.on("/lightShow", HTTP_GET, []() {
+  lightShow = true;
+});
+```
+
+- **Description**: Activates a predefined light show with cycling patterns.
+
+#### 5. Rainbow Pattern 🌈
+Generate a colorful rainbow effect on the LED matrix.
+
+```cpp
+void rainbowPattern() {
+  // Implementation of rainbow pattern here
+}
+```
+
+- **Description**: Creates a mesmerizing rainbow effect across the LED matrix.
+
+---
+
+## 🔧 Full Code
+
+You can find the complete code for this project in the following file: [ESP32_LED_Matrix_Display.ino](ESP32_LED_Matrix_Display.ino).
+
+---
+
+## 💡 Getting Started
+
+1. **Connect**: Set up your ESP32 and connect to the "ESP32_LED_Display" network.
+2. **Open Browser**: Go to the ESP32’s IP address in a web browser.
+3. **Control**: Use the web page to display text, toggle effects, and adjust settings on your LED matrix!
+
+---
+
+### 📘 Additional Resources
+- [Adafruit NeoPixel Library Documentation](https://learn.adafruit.com/adafruit-neopixel-uberguide)
+- [ESP32 Web Server Setup Guide](https://randomnerdtutorials.com/esp32-web-server-arduino-ide/)
+
+---
+
 ## Future Enhancements
 - Integration of additional sensors (e.g., thermal cameras, air quality sensors) for expanded monitoring capabilities.
 - Development of a mobile application for enhanced control and real-time data visualization.

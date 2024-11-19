@@ -308,7 +308,123 @@ You can find the complete code for this project in the following file: [ESP32_LE
 - Development of a mobile application for enhanced control and real-time data visualization.
 
 ---
+# 🚁 Advanced Quadcopter Control and Simulation Framework
 
+---
+
+## 📜 **Project Overview**  
+This repository presents the design and implementation of an advanced quadcopter control system using MATLAB Simulink. The system is meticulously engineered to tackle key challenges in unmanned aerial vehicle (UAV) operations, such as stability, environmental disturbances, and efficient battery usage. By integrating robust control mechanisms and a comprehensive simulation environment, this project lays the groundwork for both real-world UAV applications and further research.  
+
+---
+## 👥 **Team Members**  
+- **Mohit Subramaniam (21BPS1617)**  
+- **Tanya Tripathi (21BPS1595)**
+---
+<p align="center">
+  <img src="media/a.png" alt="Image 10">
+    <img src="media/b.png" alt="Image 10">
+
+</p>
+
+## ✨ **Key Features**  
+### 1. **Motor Control System**  
+- 🛠 Implements three PID controllers for precise altitude, pitch, and roll regulation.  
+- 📏 Ensures stability and responsiveness during flight by dynamically adjusting motor thrust.  
+- 🔧 Tuned PID parameters:  
+  - **Altitude Control**: P = 2, I = 0.5, D = 0.1.  
+  - **Pitch and Roll Control**: Manages differential thrust for smooth directional movements.
+<p align="center">
+  <img src="media/11.png" alt="Image 10">
+</p>
+
+### 2. **Wind Disturbance Compensation**  
+- 🌬 Simulates realistic wind gusts using a sinusoidal signal generator in Simulink.  
+- 🎯 Uses additional PID controllers for pitch and roll to counteract disturbances.  
+- ⚙️ Gain adjustment allows testing under varying wind intensities, ensuring robust performance outdoors.  
+<p align="center">
+  <img src="media/10.png" alt="Image 11">
+</p>
+
+### 3. **Battery Monitoring and Efficiency Management**  
+- 🔋 Simulates battery discharge based on motor thrust demands using an integrator block.  
+- ⚡ Activates a **Low-Power Mode** when battery levels drop below a predefined threshold (e.g., 20%).  
+- 🕒 Conserves energy by limiting non-critical functions, extending flight time, and enabling safe landings.
+<p align="center">
+  <img src="media/12.png" alt="Image 12">
+</p>
+---
+
+## 🔍 **How It Works**  
+### **Subsystems**  
+1. **Motor Control Subsystem**  
+   - Balances altitude, pitch, and roll to stabilize the quadcopter in real-time.  
+   - Combines PID outputs to provide precise motor thrust commands.  
+
+2. **Wind Compensation Subsystem**  
+   - Neutralizes simulated wind gusts using corrective control signals for pitch and roll.  
+   - Adjustable gain block scales the strength of disturbances for testing and optimization.
+
+3. **Battery Management Subsystem**  
+   - Continuously monitors power levels to simulate real-time battery depletion.  
+   - Triggers a low-power state to prioritize essential operations, extending flight duration.
+
+---
+
+## 🛠 **System Architecture**  
+### Inputs  
+- **Altitude Setpoint**: Desired height of the quadcopter.  
+- **Pitch and Roll Setpoints**: Define orientation for directional movements.  
+- **Wind Generator Input**: Simulates environmental disturbances.  
+
+### Outputs  
+- **Motor Thrust Commands**: Individual thrust values for all four motors.
+- **Battery Status**: Indicates remaining battery power and triggers low-power mode when needed.
+<p align="center">
+  <img src="media/13.png" alt="Image 10">
+    <img src="media/14.png" alt="Image 10">
+
+</p>
+---
+
+## 🌟 **Applications**  
+- **Aerial Surveillance**: Provides stable and controlled flight for observation and monitoring tasks.  
+- **Delivery Systems**: Ensures reliable navigation and performance in challenging environmental conditions.  
+- **Research and Development**: Serves as a modular platform for UAV system design and testing.  
+
+---
+
+## 📊 **Results**  
+### Performance Highlights  
+1. **Stable Altitude Control**: Maintains precise height adjustments with minimal drift.  
+2. **Wind Compensation**: Demonstrated effective handling of varying wind intensities during simulations.  
+3. **Battery Optimization**: Successfully extended flight time by dynamically managing power usage.  
+
+### Visualization  
+- **Motor Behavior**: Observed consistent thrust adjustments under slow and fast wind conditions.  
+- **Battery Monitoring**: Visualized battery depletion and activation of low-power mode.
+
+---
+
+## ✅ **Conclusion**  
+This project delivers a robust, scalable framework for quadcopter control and simulation, combining key subsystems for motor control, wind compensation, and battery efficiency. By addressing real-world challenges in UAV operations, this system paves the way for innovative applications in areas such as aerial surveillance, logistics, and environmental monitoring. The modular design enables future enhancements, making it a valuable asset for advancing UAV technology.
+
+---
+
+## 🚀 **Getting Started**  
+1. **Clone this Repository**:  
+   ```bash
+   git clone https://github.com/<your-repo-name>
+   cd <your-repo-name>
+   ```
+2. **Prerequisites**:  
+   - MATLAB and Simulink installed on your system.  
+   - Basic knowledge of control systems and UAV operation.  
+
+3. **Run the Simulink Model**:  
+   - Open the provided `.slx` file in MATLAB Simulink.  
+   - Simulate the model and observe the system's behavior through the scope blocks.
+
+---
 ## Contributing
 Contributions are welcome! Submit a pull request or open an issue for improvements.
 

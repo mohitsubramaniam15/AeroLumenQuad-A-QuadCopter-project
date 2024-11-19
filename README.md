@@ -80,7 +80,6 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 - Program the ESP32 using Arduino IDE for communication protocols and LED control.
 
 ### 4. **Testing**
-- ![Testing Image](media/testing.jpg)
 - Conduct initial flight tests to ensure stability.
 - Fine-tune PID settings for optimal performance.
 - Test ESP32's wireless communication for real-time data streaming.

@@ -1,5 +1,5 @@
 
-![Banner](media/Banner.gif)
+![Banner](images/Banner.gif)
 
 <!-- Recommended dimensions for the banner: 1200x300 pixels -->
 
@@ -40,7 +40,7 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 | Piezo LED Strip                  | ![LED](images/led_strip.jpg)               | Provides lighting for signaling and visual effects.                                             |
 | 3S LiPo Battery                  | ![Battery](images/battery.jpg)             | Powers the motors and electronics.                                                              |
 | GPS Module                       | ![GPS](images/gps.jpg)                     | Enables navigation and autonomous flight.                                                       |
-| Telemetry Module                 | ![Telemetry](images/telemetry.jpg)         | Sends real-time flight data to the ground station.                                              |
+| Telemetry Module                 | ![Telemetry](images/telemetery.jpg)         | Sends real-time flight data to the ground station.                                              |
 
 *Image dimensions for components: 300x300 pixels*
 

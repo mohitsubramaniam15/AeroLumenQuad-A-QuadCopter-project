@@ -1,8 +1,6 @@
 
 ![Banner](images/Banner.gif)
 
-<!-- Recommended dimensions for the banner: 1200x300 pixels -->
-
 # AeroLumen Quad: A Versatile Quadcopter
 
 ### Team Members
@@ -29,11 +27,20 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 
 ---
 ## Gallery
-### Row 1
-![Image 1](media/1.gif) ![Image 2](media/2.gif) ![Image 3](media/3.gif)
 
-### Row 2
-![Image 4](media/4.jpg) ![Image 5](media/5.jpg) ![Image 6](media/6.jpg) ![Image 6](media/7.jpg)
+<p align="center">
+  <img src="media/1.gif" alt="Image 1">
+  <img src="media/2.gif" alt="Image 2">
+  <img src="media/3.gif" alt="Image 3">
+</p>
+
+<p align="center">
+  <img src="media/4.jpg" alt="Image 4">
+  <img src="media/5.jpg" alt="Image 5">
+  <img src="media/6.jpg" alt="Image 6">
+  <img src="media/7.jpg" alt="Image 7">
+</p>
+
 
 ---
 

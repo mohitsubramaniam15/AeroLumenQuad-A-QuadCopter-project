@@ -30,10 +30,10 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 ---
 ## Gallery
 ### Row 1
-![Image 1](image1-url.gif) ![Image 2](image2-url.gif) ![Image 3](imag1.png)
+![Image 1](media/1.gif) ![Image 2](media/2.gif) ![Image 3](media/3.gif)
 
 ### Row 2
-![Image 4](image4-url.png) ![Image 5](image5-url.gif) ![Image 6](image6-url.png)
+![Image 4](media/4.jpg) ![Image 5](media/5.jpg) ![Image 6](media/6.jpg) ![Image 6](media/7.jpg)
 
 ---
 

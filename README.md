@@ -409,22 +409,6 @@ This repository presents the design and implementation of an advanced quadcopter
 This project delivers a robust, scalable framework for quadcopter control and simulation, combining key subsystems for motor control, wind compensation, and battery efficiency. By addressing real-world challenges in UAV operations, this system paves the way for innovative applications in areas such as aerial surveillance, logistics, and environmental monitoring. The modular design enables future enhancements, making it a valuable asset for advancing UAV technology.
 
 ---
-
-## 🚀 **Getting Started**  
-1. **Clone this Repository**:  
-   ```bash
-   git clone https://github.com/<your-repo-name>
-   cd <your-repo-name>
-   ```
-2. **Prerequisites**:  
-   - MATLAB and Simulink installed on your system.  
-   - Basic knowledge of control systems and UAV operation.  
-
-3. **Run the Simulink Model**:  
-   - Open the provided `.slx` file in MATLAB Simulink.  
-   - Simulate the model and observe the system's behavior through the scope blocks.
-
----
 ## Contributing
 Contributions are welcome! Submit a pull request or open an issue for improvements.
 

@@ -30,7 +30,7 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 ---
 ## Gallery
 ### Row 1
-![Image 1](image1-url.gif) ![Image 2](image2-url.gif) ![Image 3](image3-url.png)
+![Image 1](image1-url.gif) ![Image 2](image2-url.gif) ![Image 3](imag1.png)
 
 ### Row 2
 ![Image 4](image4-url.png) ![Image 5](image5-url.gif) ![Image 6](image6-url.png)
@@ -56,8 +56,6 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 ## Assembly and Setup
 
 ### 1. **Assembly**
-- ![Assembly Image](media/assembly.jpg)
-<!-- Image dimensions: 600x400 pixels -->
 - Attach the motors and propellers to the quadcopter frame.
 - Mount the ESCs and connect them to the respective motors.
 - Install the Pixhawk flight controller at the center of the frame.
@@ -315,6 +313,6 @@ Contributions are welcome! Submit a pull request or open an issue for improvemen
 ---
 
 ## Contact
-- Tanya Tripathi - [Email](mailto:email@example.com)
-- Saumitya Pareek - [Email](mailto:email@example.com)
-- Mohit Subramaniam - [Email](mailto:email@example.com)
+- Tanya Tripathi - [Email](mailto:tanyatripathi134340@gmail.com)
+- Saumitya Pareek - [Email](mailto:saumityapareek@gmail.com)
+- Mohit Subramaniam - [Email](mailto:mohitsubramaniam@gmail.com)

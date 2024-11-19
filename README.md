@@ -1,5 +1,6 @@
 
-[![Watch the video](media/thumbnail.png)](https://www.youtube.com/embed/6qzH9x4UsgA?autoplay=1)
+![Banner](media/Banner.gif)
+
 <!-- Recommended dimensions for the banner: 1200x300 pixels -->
 
 # AeroLumen Quad: A Versatile Quadcopter

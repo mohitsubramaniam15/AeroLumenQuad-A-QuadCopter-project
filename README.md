@@ -101,7 +101,7 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 
 ---
 
-## Earthquake Assistance UAV Drone
+## Earthquake Assistance UAV Drone (Application)
 
 This project involves designing a quadcopter UAV aimed at assisting people trapped during earthquakes. It provides visual guidance using an 8x8 NeoPixel LED matrix and is manually controlled via QGroundControl (QGC), utilizing the PX4 Pro flight control software.
 
@@ -141,7 +141,7 @@ Create a dynamic LED matrix display with the ESP32 microcontroller, allowing rem
 
 ---
 
-## Project Overview
+## Implementation Explanation
 
 This project leverages the **ESP32** microcontroller to control a **NeoPixel 8x8 LED matrix display**. Users can connect to the ESP32's WiFi access point and use a web-based interface to manage the display settings. The ESP32 runs as a standalone access point, enabling remote control from any WiFi-enabled device.
 

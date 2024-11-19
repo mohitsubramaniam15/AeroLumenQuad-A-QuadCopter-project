@@ -42,7 +42,6 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 | GPS Module                       | ![GPS](images/gps.jpg)                     | Enables navigation and autonomous flight.                                                       |
 | Telemetry Module                 | ![Telemetry](images/telemetery.jpg)         | Sends real-time flight data to the ground station.                                              |
 
-*Image dimensions for components: 300x300 pixels*
 
 ---
 
@@ -67,7 +66,6 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 
 ### 4. **Testing**
 - ![Testing Image](images/testing.jpg)
-<!-- Image dimensions: 600x400 pixels -->
 - Conduct initial flight tests to ensure stability.
 - Fine-tune PID settings for optimal performance.
 - Test ESP32's wireless communication for real-time data streaming.

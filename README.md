@@ -28,6 +28,14 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 - **Versatility**: Capable of aerial surveillance, environmental monitoring, and light shows.
 
 ---
+## Gallery
+### Row 1
+![Image 1](image1-url.gif) ![Image 2](image2-url.gif) ![Image 3](image3-url.png)
+
+### Row 2
+![Image 4](image4-url.png) ![Image 5](image5-url.gif) ![Image 6](image6-url.png)
+
+---
 
 ## Components
 | Component                        | Image                                      | Functionality                                                                                  |
@@ -48,7 +56,7 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 ## Assembly and Setup
 
 ### 1. **Assembly**
-- ![Assembly Image](images/assembly.jpg)
+- ![Assembly Image](media/assembly.jpg)
 <!-- Image dimensions: 600x400 pixels -->
 - Attach the motors and propellers to the quadcopter frame.
 - Mount the ESCs and connect them to the respective motors.
@@ -65,7 +73,7 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 - Program the ESP32 using Arduino IDE for communication protocols and LED control.
 
 ### 4. **Testing**
-- ![Testing Image](images/testing.jpg)
+- ![Testing Image](media/testing.jpg)
 - Conduct initial flight tests to ensure stability.
 - Fine-tune PID settings for optimal performance.
 - Test ESP32's wireless communication for real-time data streaming.
@@ -98,8 +106,6 @@ AeroLumen Quad is a multi-functional quadcopter designed for versatile applicati
 ## Earthquake Assistance UAV Drone
 
 This project involves designing a quadcopter UAV aimed at assisting people trapped during earthquakes. It provides visual guidance using an 8x8 NeoPixel LED matrix and is manually controlled via QGroundControl (QGC), utilizing the PX4 Pro flight control software.
-
-![Banner Image](assets/banner.png)
 
 ### 📋 Project Overview
 
@@ -134,21 +140,6 @@ This project involves designing a quadcopter UAV aimed at assisting people trapp
 # ESP32 LED Matrix Display Project 🎨
 
 Create a dynamic LED matrix display with the ESP32 microcontroller, allowing remote control through a web interface! This project enables users to display text, activate lighting patterns, and adjust brightness in real time.
-
----
-
-## 📜 Table of Contents
-- [Project Overview](#project-overview)
-- [Libraries and Constants](#libraries-and-constants)
-- [WiFi Access Point Setup](#wifi-access-point-setup)
-- [LED Matrix Character Map](#led-matrix-character-map)
-- [Web Server Configuration](#web-server-configuration)
-  - [Web Page Design](#web-page-design)
-  - [Control Actions](#control-actions)
-    - [Text Display](#text-display)
-    - [Turn Off Display](#turn-off-display)
-    - [Light Bar & Color Selection](#light-bar--color-selection)
-    - [Light Show](#light-show)
 
 ---
 
@@ -288,7 +279,7 @@ void rainbowPattern() {
 
 ## 🔧 Full Code
 
-You can find the complete code for this project in the following file: [ESP32_LED_Matrix_Display.ino](ESP32_LED_Matrix_Display.ino).
+You can find the complete code for this project in the following file: [ESP32_LED_Matrix_Display.ino](esp_comms.ino).
 
 ---
 
@@ -314,11 +305,6 @@ You can find the complete code for this project in the following file: [ESP32_LE
 
 ## Contributing
 Contributions are welcome! Submit a pull request or open an issue for improvements.
-
----
-
-## License
-This project is licensed under the MIT License.
 
 ---
 

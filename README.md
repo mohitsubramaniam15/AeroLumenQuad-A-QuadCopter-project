@@ -1,5 +1,5 @@
 
-# ![AeroLumen Quad](images/banner.jpg)
+# ![AeroLumen Quad]([images/banner.jpg](https://drive.google.com/file/d/1y56h0dvjyRO5Y21TBzxDZCuiTMvsZQqL/view?usp=sharing))
 <!-- Recommended dimensions for the banner: 1200x300 pixels -->
 
 # AeroLumen Quad: A Versatile Quadcopter

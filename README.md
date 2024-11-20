@@ -1,4 +1,3 @@
-
 ![Banner](images/Banner.gif)
 
 # AeroLumen Quad: A Versatile Quadcopter

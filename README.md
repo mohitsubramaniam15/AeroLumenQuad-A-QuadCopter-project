@@ -7,7 +7,7 @@
 - **Saumitya Pareek** (21BPS1408)
 - **Mohit Subramaniam** (21BPS1617)
 
-### Supervisor
+### Guide
 - **Dr. V. Muthumanikandan**
 
 ---
